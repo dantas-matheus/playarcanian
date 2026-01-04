@@ -36,7 +36,7 @@ function glitch(text) {
 function redirect() {
   print("\n\n[ DISCONNECTING... ]");
   setTimeout(() => {
-    window.location.href = "test.html";
+    window.location.href = "/";
   }, 1500);
 }
 
@@ -152,3 +152,4 @@ document.addEventListener("keydown", e => {
 });
 
 setTimeout(boot, 1600);
+
