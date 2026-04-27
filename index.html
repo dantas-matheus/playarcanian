@@ -8,28 +8,26 @@
   <meta name="author" content="Two Eyes On You">
   <link rel="shortcut icon" href="img/favicon.ico"> 
   <title>Two Eyes on You</title>
-  <link rel="stylesheet" href="style/notice.css">
+  <link rel="stylesheet" href="style/index.css">
 </head>
+
+<body>
 
 
 <body>
 
 <header class="main-header">
-<div class="nav-container">
-  <div class="logo">
-    <img src="img/logo.png" alt="Two Eyes On You">
-  </div>
+  <div class="nav-container">
+    <div class="logo">
+      <img src="img/logo.png" alt="Arcanian">
+    </div>
 
-  <div class="menu-toggle">☰</div>
-
-  <nav class="nav-menu">
+<nav class="nav-menu">
   <a href="#" class="nav-link maintenance">Home</a>
-  <a href="#" class="nav-link active">Blog</a>
+  <a href="#" class="nav-link maintenance">Blog</a>
   <a href="#" class="nav-link maintenance">Media</a>
   <a href="#" class="nav-link maintenance">O Jogo</a>
   <a href="#" class="nav-link maintenance">Comunidade</a>
-  <a href="#" class="nav-link maintenance">Feedback</a>
-  <a href="#" class="nav-link maintenance">Download</a>
     </nav>
   </div>
 </header>
@@ -132,7 +130,9 @@
       <p>
         "Não se sabe o que são. Não falam, não sentem dor, muito menos são racionais.
         Suspeita-se que eles são mais uma criação de Vincent, durante o projeto L.A.C.H.R.Y.M.A.
-        Eles são altamente contagiosos, então tente não ficar muito perto deles quando os encontram, tudo bem?"
+        Eles são altamente contagiosos, então tente não ficar muito perto deles quando os encontram, tudo bem?
+        Você provavelmente reparou nos chifres, relaxa quanto a isso, provavelmente é uma mutação ou algo do tipo. 
+        Já vimos até algumas aberrações com dentes de marfim."
       </p>
     </div>
   </div>
@@ -263,14 +263,14 @@
   <div class="footer-content">
 
     <p class="footer-warning">
-      Esta é uma página temporária. O conteúdo será transferido para a aba "Notícias" quando o site estiver completo.
+      Esta é uma página temporária. O conteúdo será transferido para a aba "Blog" quando o site estiver completo.
     </p>
 
     <div class="footer-links">
-      <a href="index.html">Início</a>
-      <a href="#">Notícias</a>
-      <a href="#">Privacidade</a>
-      <a href="#">Contato</a>
+      <a href="index.html" class="nav-link maintenance">Início</a>
+      <a href="#" class="nav-link maintenance">Notícias</a>
+      <a href="#" class="nav-link maintenance">Privacidade</a>
+      <a href="#" class="nav-link maintenance">Contato</a
     </div>
 
     <p class="footer-copy">
@@ -285,6 +285,7 @@
 
   blocks.forEach(block => {
     block.querySelector('img').addEventListener('click', () => {
+      
       blocks.forEach(b => {
         if (b !== block) b.classList.remove('active');
       });
@@ -303,6 +304,7 @@
   links.forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
+
       toast.classList.add('show');
 
       setTimeout(() => {
@@ -310,21 +312,6 @@
       }, 3000);
     });
   });
-
-  const toggle = document.querySelector('.menu-toggle');
-  const menu = document.querySelector('.nav-menu');
-
-  if (toggle && menu) {
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('active');
-    });
-
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        menu.classList.remove('active');
-      });
-    });
-  }
 </script>
 
 </body>
