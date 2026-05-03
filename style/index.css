@@ -21,11 +21,9 @@ body {
 
 .hero img {
   width: 100%;
-  height: 480px;
-  object-fit: cover;
+  height: auto;
   border-radius: 12px;
 }
-
 .hero-text {
   margin-top: 24px;
 }
