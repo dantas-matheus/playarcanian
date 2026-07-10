@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Notícias oficiais da Two Eyes On You™.">
+<title>Notícias | Two Eyes On You™</title>
+<link rel="shortcut icon" href="img/favicon.ico">
+<link rel="stylesheet" href="style/notice.css">
+</head>
+<body>
+<header class="main-header">
+    <div class="nav-container">
+
+        <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="Two Eyes On You">
+        </a>
+
+        <nav class="nav-menu">
+
+            <a href="index.html" class="nav-link">
+                Home
+            </a>
+
+            <a href="arcanian.html" class="nav-link">
+                Arcanian
+            </a>
+
+            <a href="news.html" class="nav-link active">
+                Notícias
+            </a>
+
+            <a href="documentation.html" class="nav-link">
+                Documentação
+            </a>
+
+            <a href="about.html" class="nav-link">
+                Quem somos?
+            </a>
+
+            <a href="contact.html" class="nav-link">
+                Contato
+            </a>
+
+        </nav>
+
+        <div class="header-actions">
+
+            <a href="https://arcanian.com.br/devaneios"
+               target="_blank"
+               class="btn-preorder">
+                PRÉ-VENDA
+            </a>
+
+        </div>
+
+    </div>
+</header>
+<main>
+<section class="legal-hero">
+<div class="legal-hero-content reveal">
+<span class="eyebrow">CENTRAL DE NOTÍCIAS</span>
+<h1>Notícias</h1>
+<p>Acompanhe anúncios, lançamentos e comunicados oficiais da Two Eyes On You™.</p>
+<small>Atualizado em 10 de julho de 2026</small>
+</div>
+</section>
+
+
+</div>
+
+<section class="news-archive">
+
+  <a href="first_notice_page.html" class="news-archive-item">
+
+    <div class="news-archive-image">
+      <img src="img/welcomeback.png" alt="Arcanian: Devaneios">
+    </div>
+
+    <div class="news-archive-content">
+
+      <span class="news-archive-category">PRÉ-VENDA</span>
+
+      <h2>A pré-venda de Arcanian: Devaneios está acontecendo.</h2>
+
+      <p>
+        O primeiro projeto narrativo da Two Eyes On You™, escrito por
+        Matheus Dantas, está oficialmente em pré-venda digital na Amazon.
+      </p>
+
+      <div class="news-archive-meta">
+        <time datetime="2026-07-10">10 de julho de 2026</time>
+        <strong>Publicado por Two Eyes On You</strong>
+      </div>
+
+    </div>
+
+  </a>
+
+  <article class="news-archive-item news-archive-disabled">
+
+    <div class="news-archive-image news-archive-placeholder">
+      <span>EM BREVE</span>
+    </div>
+
+    <div class="news-archive-content">
+
+      <span class="news-archive-category">COMUNICADO</span>
+
+      <h2>Novas notícias chegarão em breve.</h2>
+
+      <p>
+        Este espaço será utilizado para divulgar anúncios, trailers,
+        atualizações de desenvolvimento, lançamentos, eventos e comunicados oficiais.
+      </p>
+
+      <div class="news-archive-meta">
+        <span>Data não definida</span>
+        <strong>Two Eyes On You</strong>
+      </div>
+
+    </div>
+
+  </article>
+
+</section>
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-brand">
+
+            <img src="img/logo.png" alt="Two Eyes On You">
+
+            <p>
+                Two Eyes On You™ é um estúdio brasileiro independente dedicado ao
+                desenvolvimento de jogos, livros e universos narrativos autorais.
+            </p>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h4>Empresa</h4>
+
+            <a href="about.html">Sobre</a>
+            <a href="news.html">Notícias</a>
+            <a href="documentation.html">Documentação</a>
+            <a href="contact.html">Contato</a>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h4>Redes sociais</h4>
+
+            <a href="https://instagram.com/twoeyesonyou" target="_blank">
+                Instagram
+            </a>
+
+            <a href="https://x.com/twoeyeson_you" target="_blank">
+                X (Twitter)
+            </a>
+
+            <a href="https://www.tiktok.com/@twoeyesonyou" target="_blank">
+                TikTok
+            </a>
+
+            <a href="https://youtube.com/@twoeyesonyou" target="_blank">
+                YouTube
+            </a>
+
+            <a href="https://discord.gg/Ftu5mcXhcX" target="_blank">
+                Discord
+            </a>
+
+        </div>
+
+    </div>
+
+  <div class="footer-bottom">
+    <div class="footer-links">
+      <a href="privacy.html">Política de Privacidade</a>
+      <a href="terms.html">Termos de Uso</a>
+      <a href="cookies.html">Política de Cookies</a>
+      <a href="licenses.html">Licenças</a>
+      <a href="brand.html">Marca Two Eyes On You™</a>
+      <a href="arcanian-brand.html">Marca Arcanian™</a>
+    </div>
+
+
+        <p>
+            © 2026 Two Eyes On You™. Todos os direitos reservados.
+        </p>
+
+    </div>
+
+</footer>
+
+<script>
+const reveals=document.querySelectorAll('.reveal');
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}}),{threshold:.12});
+reveals.forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
