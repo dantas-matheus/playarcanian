@@ -17,51 +17,58 @@
 <body>
 
 <header class="main-header">
-    <div class="nav-container">
+  <div class="nav-container">
 
-        <a href="/" class="logo">
-            <img src="/img/logo.png" alt="Two Eyes On You">
-        </a>
+    <a href="/" class="logo" aria-label="Página inicial">
+      <img src="img/logo.png" alt="Two Eyes On You">
+    </a>
 
-        <nav class="nav-menu">
+    <nav class="nav-menu" id="mobile-menu" aria-label="Navegação principal">
 
-            <a href="/" class="nav-link">
-                Home
-            </a>
+      <a href="/" class="nav-link">Home</a>
+      <a href="/arcanian/" class="nav-link">Arcanian</a>
+      <a href="/news/" class="nav-link">Notícias</a>
+      <a href="/documentation/" class="nav-link active">Documentação</a>
+      <a href="/about/" class="nav-link">Quem somos?</a>
+      <a href="/contact/" class="nav-link">Contato</a>
 
-            <a href="/arcanian/" class="nav-link">
-                Arcanian
-            </a>
+      <a
+        href="https://arcanian.com.br/devaneios"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mobile-preorder"
+      >
+        PRÉ-VENDA
+      </a>
 
-            <a href="/news/" class="nav-link">
-                Notícias
-            </a>
+    </nav>
 
-            <a href="/documentation/" class="nav-link active">
-                Documentação
-            </a>
-
-            <a href="/about/" class="nav-link">
-                Quem somos?
-            </a>
-
-            <a href="/contact/" class="nav-link">
-                Contato
-            </a>
-
-        </nav>
-
-        <div class="header-actions">
-
-            <a href="https://arcanian.com.br/devaneios"
-               target="_blank"
-               class="btn-preorder">
-                PRÉ-VENDA
-            </a>
-
-        </div>
-
+    <div class="header-actions">
+      <a
+        href="https://arcanian.com.br/devaneios"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-preorder"
+      >
+        PRÉ-VENDA
+      </a>
     </div>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Abrir menu"
+      aria-controls="mobile-menu"
+      aria-expanded="false"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+
+  <div class="menu-overlay"></div>
 </header>
 
 <main>
@@ -186,7 +193,7 @@
     </article>
 
 <article class="legal-block">
-  <h2>16. Contato</h2>
+  <h2>14. Contato</h2>
 
   <p>
     Caso tenha dúvidas relacionadas a estes Termos de Uso ou deseje entrar em contato
@@ -285,6 +292,58 @@
 </footer>
 
 <script>
+  const menuToggle = document.querySelector('.menu-toggle');
+const mobileMenu = document.querySelector('.nav-menu');
+const menuOverlay = document.querySelector('.menu-overlay');
+const mobileMenuLinks = document.querySelectorAll('.nav-menu a');
+
+function openMobileMenu() {
+  mobileMenu.classList.add('active');
+  menuToggle.classList.add('active');
+  menuOverlay.classList.add('active');
+  document.body.classList.add('menu-open');
+
+  menuToggle.setAttribute('aria-expanded', 'true');
+  menuToggle.setAttribute('aria-label', 'Fechar menu');
+}
+
+function closeMobileMenu() {
+  mobileMenu.classList.remove('active');
+  menuToggle.classList.remove('active');
+  menuOverlay.classList.remove('active');
+  document.body.classList.remove('menu-open');
+
+  menuToggle.setAttribute('aria-expanded', 'false');
+  menuToggle.setAttribute('aria-label', 'Abrir menu');
+}
+
+menuToggle.addEventListener('click', () => {
+  const menuIsOpen = mobileMenu.classList.contains('active');
+
+  if (menuIsOpen) {
+    closeMobileMenu();
+  } else {
+    openMobileMenu();
+  }
+});
+
+menuOverlay.addEventListener('click', closeMobileMenu);
+
+mobileMenuLinks.forEach(link => {
+  link.addEventListener('click', closeMobileMenu);
+});
+
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') {
+    closeMobileMenu();
+  }
+});
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 1000) {
+    closeMobileMenu();
+  }
+});
   const reveals = document.querySelectorAll('.reveal');
 
   const observer = new IntersectionObserver(entries => {
