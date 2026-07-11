@@ -839,10 +839,8 @@ main {
     height: 100%;
     object-fit: cover;
 
-    /* Move o foco da imagem para a direita */
     object-position: 50% center;
 
-    /* Faz a imagem aparecer mais */
     opacity: 0.9;
 
     transform: scale(1.04);
