@@ -840,7 +840,7 @@ main {
     object-fit: cover;
 
     /* Move o foco da imagem para a direita */
-    object-position: 75% center;
+    object-position: 50% center;
 
     /* Faz a imagem aparecer mais */
     opacity: 0.9;
