@@ -675,7 +675,7 @@ img {
     radial-gradient(circle at 72% 32%, rgba(255, 70, 85, 0.28), transparent 34%),
     radial-gradient(circle at 18% 70%, rgba(255, 255, 255, 0.08), transparent 28%),
     linear-gradient(to top, #030303 6%, rgba(3,3,3,0.45), rgba(3,3,3,0.12)),
-    url("../img/banner.png") center/cover no-repeat;
+    url("../img/banner2.png") center/cover no-repeat;
   opacity: 0.78;
   transform: scale(1.05);
 }
