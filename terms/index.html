@@ -17,51 +17,46 @@
 <body>
 
 <header class="main-header">
-    <div class="nav-container">
+  <div class="nav-container">
 
-        <a href="/" class="logo">
-            <img src="/img/logo.png" alt="Two Eyes On You">
-        </a>
+    <a href="/" class="logo" aria-label="Página inicial">
+      <img src="/img/logo.png" alt="Two Eyes On You">
+    </a>
 
-        <nav class="nav-menu">
+    <nav class="nav-menu" id="mobile-menu" aria-label="Navegação principal">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/arcanian/" class="nav-link">Arcanian</a>
+      <a href="/news/" class="nav-link">Notícias</a>
+      <a href="/documentation/" class="nav-link">Documentação</a>
+      <a href="/about/" class="nav-link">Quem somos?</a>
+      <a href="/contact/" class="nav-link">Contato</a>
 
-            <a href="/" class="nav-link active">
-                Home
-            </a>
+      <a href="/purchase/" class="mobile-preorder">
+        ESCOLHER EDIÇÃO
+      </a>
+    </nav>
 
-            <a href="/arcanian/" class="nav-link">
-                Arcanian
-            </a>
-
-            <a href="/news/" class="nav-link">
-                Notícias
-            </a>
-
-            <a href="/documentation/" class="nav-link">
-                Documentação
-            </a>
-
-            <a href="/about/" class="nav-link">
-                Quem somos?
-            </a>
-
-            <a href="/contact/" class="nav-link">
-                Contato
-            </a>
-
-        </nav>
-
-        <div class="header-actions">
-
-            <a href="https://arcanian.com.br/devaneios"
-               target="_blank"
-               class="btn-preorder">
-                PRÉ-VENDA
-            </a>
-
-        </div>
-
+    <div class="header-actions">
+      <a href="/purchase/" class="btn-preorder">
+        ESCOLHER EDIÇÃO
+      </a>
     </div>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Abrir menu"
+      aria-controls="mobile-menu"
+      aria-expanded="false"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+
+  <div class="menu-overlay"></div>
 </header>
 
 <main>
